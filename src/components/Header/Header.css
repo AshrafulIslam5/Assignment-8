@@ -1,0 +1,20 @@
+nav
+{
+    background: rgb(6, 208, 235);
+}
+nav div
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav div img
+{
+    width: 90px;
+    margin-right: 10px;
+}
+nav div h4
+{
+    font-size: 28px;
+}
