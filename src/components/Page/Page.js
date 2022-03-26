@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
-import Product from '../Product/Product';
+import Products from '../Products/Products';
 import './Page.css';
 
 const Page = () => {
@@ -53,11 +53,11 @@ const Page = () => {
         <div className='page'>
             <div className='products-container'>
                 {
-                    products.map(product => <Product
+                    products.map(product => <Products
                         product={product}
                         key={product.id}
                         addToCart={addToCart}
-                    ></Product>)
+                    ></Products>)
                 }
             </div>
             <div className='cart-container'>
