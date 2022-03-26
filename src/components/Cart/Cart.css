@@ -2,7 +2,7 @@
 {
     position: sticky;
     top: 0;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 14px;
     border-radius: 10px;
     border-top-right-radius: 0px;
@@ -32,4 +32,8 @@
     display: flex;
     flex-direction: column;
     width: 70%;
+}
+.cart .btns .btn
+{
+    font-size: 18px;
 }
