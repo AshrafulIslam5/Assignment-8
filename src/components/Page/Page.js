@@ -16,8 +16,12 @@ const Page = () => {
     const addToCart = (selectedProduct) => {
         let newCart = [];
         newCart = [...cart, selectedProduct];
+        // if an item exists.. it cannot be added again
+        const exist = cart.find(product => product.id === selectedProduct.id);
+        if (exist) {
+            newCart = [...cart];
+        }
         setCart(newCart);
-        
     }
 
     const clearCart = () => {
