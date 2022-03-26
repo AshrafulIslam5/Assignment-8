@@ -11,3 +11,23 @@
     gap: 30px;
     padding: 26px;
 }
+@media screen and (max-width: 688px) {
+    .page
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+    .page .products-container
+    {
+        grid-template-columns: repeat(2, 1fr); 
+    } 
+}
+@media screen and (max-width: 992px) and (min-width: 689px) {
+    .page
+    {
+        grid-template-columns: 2fr 1fr;
+    }
+    .page .products-container
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
