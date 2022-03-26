@@ -2,12 +2,14 @@ import React from 'react';
 import CartProduct from '../Cart-Product/CartProduct';
 import './Cart.css';
 
+// cart products and functions of the buttons
 const Cart = ({ cart, clearCart, chooseOne }) => {
     return (
         <div className='cart'>
             <h4>Selected Books</h4>
             <div className='cart-add'>
                 {
+                    // mapping from the array to get product of the cart and customize it
                     cart.map(product => <CartProduct key={product.id} product={product}></CartProduct>)
                 }
             </div>

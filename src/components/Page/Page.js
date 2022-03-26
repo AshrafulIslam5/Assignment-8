@@ -7,12 +7,14 @@ const Page = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
+    // fetching
     useEffect(() => {
         fetch('products.json')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
 
+    // function to add products to the card
     const addToCart = (selectedProduct) => {
         let newCart = [];
         newCart = [...cart, selectedProduct];
@@ -32,11 +34,13 @@ const Page = () => {
         setCart(newCart);
     }
 
+    // function of reset cart
     const clearCart = () => {
         const newCart = [];
         setCart(newCart)
     }
 
+    // function of choose one btn
     const chooseOne = () => {
         if (cart.length === 0) {
             // added alert cuz i didn't had much time.....sorry
