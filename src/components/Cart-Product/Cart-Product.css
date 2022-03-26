@@ -1,0 +1,19 @@
+.cart-product
+{
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+.cart-product img
+{
+    margin-left: 7px;
+}
+.cart-product p
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}

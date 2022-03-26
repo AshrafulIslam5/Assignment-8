@@ -12,27 +12,32 @@ const Page = () => {
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
-    let newCart = [];
+
     const addToCart = (selectedProduct) => {
+        let newCart = [];
         newCart = [...cart, selectedProduct];
         setCart(newCart);
-        console.log(cart);
+        
     }
 
-
+    const clearCart = () => {
+        const newCart = [];
+        setCart(newCart)
+    }
+    
     return (
         <div className='page'>
             <div className='products-container'>
-                    {
-                        products.map(product => <Product
-                            product={product}
-                            key={product.id}
-                            addToCart={addToCart}
-                        ></Product>)
-                    }
+                {
+                    products.map(product => <Product
+                        product={product}
+                        key={product.id}
+                        addToCart={addToCart}
+                    ></Product>)
+                }
             </div>
             <div className='cart-container'>
-                <Cart></Cart>
+                <Cart cart={cart} clearCart={clearCart}></Cart>
             </div>
         </div>
     );
